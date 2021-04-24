@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h4 class="text-center">Government Testing Labs</h4>
+
+<div class="row mt-3">
+    <div class="col-md-6 d-flex align-center justify-content-end">
+        <a href="{% url 'testingLab' %}" class="btn btn-success">Government Labs</a>
+    </div>
+    <div class="col-md-6 d-flex align-center justify-content-start">
+        <a href="{% url 'privateTestingLab' %}" class="btn btn-primary">Private Labs</a>
+    </div>
+</div>
+
+<div class="card card-body my-3">
+  <div class="card-text m-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in testingApi %}
+        {% for labs in item.government_labs %}
+        <tr>
+            <td>{{labs.name}}</td>
+            <td>{{labs.address}}</td>
+          </tr>
+        {% endfor %}
+        
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+{% endblock %}

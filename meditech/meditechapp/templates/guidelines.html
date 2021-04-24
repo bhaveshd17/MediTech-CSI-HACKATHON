@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %} 
+{% load static %}
+<h1 class="text-center"> General Guidelines </h1>
+<div class="row">
+    <div class="col-md-6">
+        <img src="{% static 'images/guideline-1.jpg' %}" height="766" width="539" alt="hindu"/>
+    </div>
+    <div class="col-md-6">
+        <img src="{% static 'images/guideline-2.jpg' %}" height="766" width="539" alt="hindu"/>
+    </div>
+    <div class="col-md-6">
+        <img src="{% static 'images/guideline-3.jpg' %}" height="766" width="539" alt="hindu"/>
+    </div>
+    <div class="col-md-6">
+        <img src="{% static 'images/guideline-4.jpg' %}" height="766" width="539" alt="hindu"/>
+    </div>
+</div>
+<br><br>
+<ul class="list-group">
+    <li class="list-group-item">
+        Covid-19 resource for Mumbai <a href="{{covid_resources}}" target="_blank">click here</a>
+    </li>
+    <li class="list-group-item">
+        Covid-19 General Guidelines <a href="{{guidelines}}" target="_blank">click here</a>
+    </li>
+    <li class="list-group-item">
+        Covid-19 Advice for public <a href="{{advice}}" target="_blank">click here</a>
+    </li>
+</ul>    
+
+<br><br>
+<h3>Guidelines for Burials & Cremations</h3>
+<div class="row">
+    <div class="col-md-6">
+        <img src="{% static 'images/funeral-hindu.jpg' %}" height="766" width="539" alt="hindu"/>
+    </div>
+    <div class="col-12 col-md-1">
+        <img src="{% static 'images/funeral-sikh.jpg' %}" height="766" width="539" alt="hindu" />
+    </div>
+</div>
+<br>
+<ul class="list-group">
+    <li class="list-group-item">
+        Covid-19 guidelines on dead body management <a href="{{dead_body_management}}" target="_blank">click here</a>
+    </li>
+    <li class="list-group-item">
+        Funeral Guidelines for individuals and families <a href="{{funeral_guidelines}}" target="_blank"> click here </a>
+    </li>
+    <li class="list-group-item">
+        COVID-19 and Islamic burial laws <a href="{{islamic_burial}}" target="_blank"> click here </a>
+    </li>
+    <li class="list-group-item">
+        Catholic COVID-19 Guideline <a href="{{catholic_burial}}" target="_blank"> click here </a>
+    </li>
+    <li class="list-group-item">
+       Buddhist COVID-19 Guideline <a href="{{catholic_burial}}" target="_blank"> click here </a>
+    </li>
+    <li class="list-group-item">
+        Planning Funeral in COVID-19 <a href="{{funeral}}" target="_blank"> click here </a>
+    </li>
+ 
+</ul>
+<br><br>
+{% endblock %}

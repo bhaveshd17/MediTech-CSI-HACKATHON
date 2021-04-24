@@ -7,4 +7,8 @@ urlpatterns = [
 	path('bedsAvailability/', views.bedsAvailabilty, name="bedsAvailability"),
 	path('bloodDonation/', views.bloodDonation, name="bloodDonation"),
 	path('requestDonation/', views.requestDonation, name="requestDonation"),
+	path('schemeEligibility/', views.schemeEligibility, name="schemeEligibility"),
+	path('guidelines/', views.guidelines, name="guidelines"),
+	path('testingLab/', views.testingLab, name="testingLab"),
+	path('privateTestingLab/', views.privateTestingLab, name="privateTestingLab"),
 ]

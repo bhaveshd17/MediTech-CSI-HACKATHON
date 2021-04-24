@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h4 class="text-center mb-3">Scheme Eligibility</h4>
+<div class="card card-body mb-3">
+
+    <form action="" method="post" class="m-5">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name">
+        </div>
+    
+        <div class="form-group mb-3">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" name="age" id="age">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="contact">Income</label>
+            <input type="number" class="form-control" name="income" id="income">
+        </div>
+
+        <div class="form-group mb-3">
+
+            <label for="contact">Occupation</label>
+            <input type="text" class="form-control" name="occupation" id="occupation">
+        </div>
+
+        <div class="form-group mb-3">
+
+            <label for="contact">Locality</label>
+            <input type="text" class="form-control" name="locality" id="locality">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="contact">Caste</label>
+            <input type="caste" class="form-control" name="caste" id="caste">
+        </div>
+    
+        <div class="form-group mb-3">
+            <label>Ration Card holder</label>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radio" id="inlineRadio1" value="yes">
+                    <label class="form-check-label" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radio" id="inlineRadio2" value="no">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+                
+            </div>
+        </div>
+
+        
+
+        
+        
+    
+        <div class="row">
+            <div class="col-md-6 d-flex align-center justify-content-end">
+                <button class="btn btn-success">Check</button>
+            </div>
+
+        </div>
+    </form>
+
+</div>
+{% endblock %}

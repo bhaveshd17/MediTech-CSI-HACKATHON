@@ -5,3 +5,4 @@ from .models import *
 
 
 admin.site.register(BloodDonation)
+admin.site.register(SchemesEligibility)
