@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% if bloodDonarObj %}
+
+<h4 class="text-center">Blood Donar</h4>
+<div class="card card-body my-5">
+  <div class="card-text m-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Mobile Number</th>
+          <th scope="col">Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for bloodDonar in bloodDonarObj %}
+        <tr>
+          <td>{{bloodDonar.name}}</td>
+          <td>{{bloodDonar.age}}</td>
+          <td>{{bloodDonar.contact}}</td>
+          <td>{{bloodDonar.location}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% else %}
+<div class="card text-center my-5">
+    <div class="card-header">
+      No Match Found
+    </div>
+    <div class="card-body">
+      
+      <p class="card-text">{{bloodGrp}} Blood group not found!</p>
+      <a href="/" class="btn btn-primary">Home</a>
+    </div>
+  </div>
+
+{% endif %}
+
+{% endblock %}

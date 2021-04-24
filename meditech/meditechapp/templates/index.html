@@ -1,12 +1,86 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
-</head>
-<body>
-<h1>hello</h1>
-</body>
-</html>
+
+<div class="row justify-content-center text-center">
+    <div class="col-12">
+        <form class="d-flex">
+            <input class="form-control me-2 col-10" type="search" placeholder="Search for Tesing Labs, Hospitals, Vaccine Centres, GuideLines..." aria-label="Search">
+            <button class="btn btn-outline-success col-2 ml-3" type="submit"><i class="fa fa-search fa-lg"></i> Search</button>
+        </form>
+    </div>
+    <br><br><br><br>
+    <hr/>
+    <a href="{% url 'home' %}" class="text-dark" style="text-decoration: none;">
+    <div class="col-12 col-md-4">
+        <div class="card cards-home shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+            <img src="{% static 'images/blood.jpeg' %}" class="card-img-top" width="100" height="200" alt="blood" >
+            <div class="card-body">
+                <h5 class="card-text">Blood Donation</h5>
+            </div>
+        </div>
+    </div>
+    </a>
+
+    <a href="{% url 'home' %}" class="text-dark" style="text-decoration: none;">
+    <div class="col-12 col-md-4">
+        <div class="card cards-home shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+            <img src="{% static 'images/schemes.jpeg' %}" class="card-img-top" width="100" height="200" alt="blood" >
+            <div class="card-body">
+                <h5 class="card-text">Schemes Eligibility</h5>
+            </div>
+        </div>
+    </div>
+    </a>
+
+
+    <a href="{% url 'home' %}" class="text-dark" style="text-decoration: none;">
+    <div class="col-12 col-md-4">
+        <div class="card cards-home shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+            <img src="{% static 'images/doctor.jpeg' %}" class="card-img-top" width="100" height="200" alt="blood" >
+            <div class="card-body">
+                <h5 class="card-text">Nearest Doctor</h5>
+            </div>
+        </div>
+    </div>
+    </a>
+
+
+    <a href="{% url 'home' %}" class="text-dark" style="text-decoration: none;">
+    <div class="col-12 col-md-4">
+        <div class="card cards-home shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+            <img src="{% static 'images/bed.jpeg' %}" class="card-img-top" width="100" height="200" alt="blood" >
+            <div class="card-body">
+                <h5 class="card-text">Bed Availability</h5>
+            </div>
+        </div>
+    </div>
+    </a>
+
+
+    <a href="{% url 'home' %}" class="text-dark" style="text-decoration: none;">
+    <div class="col-12 col-md-4">
+        <div class="card cards-home shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+            <img src="{% static 'images/testing labs.jpeg' %}" class="card-img-top" width="100" height="200" alt="blood" >
+            <div class="card-body">
+                <h5 class="card-text">Testing Labs & Vaccine Centres</h5>
+            </div>
+        </div>
+    </div>
+    </a>
+
+    <a href="{% url 'home' %}" class="text-dark" style="text-decoration: none;">
+    <div class="col-12 col-md-4">
+        <div class="card cards-home shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+            <img src="{% static 'images/medicine.jpeg' %}" class="card-img-top" width="100" height="200" alt="blood" >
+            <div class="card-body">
+                <h5 class="card-text">Medicine & Oxygen Cylinders Distributors</h5>
+            </div>
+        </div>
+    </div>
+    </a>
+
+
+</div>
+<br><br><br><br>
+{% endblock %}

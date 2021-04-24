@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h4 class="text-center">Beds Availablility per State</h4>
+<div class="card card-body my-5">
+  <div class="card-text m-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">State</th>
+          <th scope="col">Rural Beds Available</th>
+          <th scope="col">Urban Beds Available</th>
+          <th scope="col">Total Beds Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for region in regionWise %}
+        <tr>
+          <td>{{region.state}}</td>
+          <td>{{region.ruralBeds}}</td>
+          <td>{{region.urbanBeds}}</td>
+          <td>{{region.totalBeds}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+{% endblock %}

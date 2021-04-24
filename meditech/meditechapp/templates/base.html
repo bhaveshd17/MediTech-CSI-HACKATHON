@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap Social -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'home' %}">MediTech</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="{% url 'home' %}"><span
+                                class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span>
+                            Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-dollar fa-lg"></span> Donate
+                            for poor </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Guidelines
+                        </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-bell fa-lg"></span>
+                            Notifications </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="container" style="margin-top:25px;">
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    Vidyalankar Institute of Technology is an <br />
+                    Engineering & Management Institute <br />
+                    approved by AICTE, New Delhi and Government of Maharashtra. <br />
+                    The Institute is affiliated to University of Mumbai. <br />
+                </div>
+                <div class="col-4">
+                    <h5>Our Address</h5>
+                    <address>
+                        Vidyalankar Educational Campus, <br />
+                        Vidyalankar College Rd, Wadala East, <br />
+                        Deen Bandhu Nagar, Antop Hill, <br />
+                        Mumbai, Maharashtra 400037 <br />
+                        <i class="fa fa-phone fa-lg"></i>: +91 022 2416 1126<br>
+                        <i class="fa fa-fax fa-lg"></i>: +91 022 2422 88 92<br>
+                        <i class="fa fa-envelope fa-lg"></i>: <a
+                            href="mailto:principal@vit.edu.in">principal@vit.edu.in</a>
+                    </address>
+                </div>
+                <div class="col-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="https://www.instagram.com/vit_vidyalankar/"><i
+                                class="fa fa-instagram fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/Vidyalankar.VIT/"><i
+                                class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin"
+                            href="https://www.linkedin.com/school/vidyalankar-institute-of-technology-mumbai"><i
+                                class="fa fa-linkedin fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/VIT_Vidyalankar"><i
+                                class="fa fa-twitter fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" style="text-decoration: none; color:red;"
+                            href="https://www.youtube.com/channel/UCxRGJGcQw869LJ-btMhPOMA"><i
+                                class="fa fa-youtube fa-lg"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:principal@vit.edu.in"><i
+                                class="fa fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p>© Copyright 2021 MediTech|VIT</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</body>
+
+</html>
